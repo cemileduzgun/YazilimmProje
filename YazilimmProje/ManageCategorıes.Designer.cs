@@ -36,12 +36,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.categoriesData = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textCatID = new System.Windows.Forms.TextBox();
+            this.textCatName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,6 +123,7 @@
             this.button2.TabIndex = 25;
             this.button2.Text = "Home";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -151,42 +154,20 @@
             this.Addbtn.TabIndex = 23;
             this.Addbtn.Text = "Add";
             this.Addbtn.UseVisualStyleBackColor = false;
+            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
-            // maskedTextBox7
+            // categoriesData
             // 
-            this.maskedTextBox7.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox7.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox7.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox7.Location = new System.Drawing.Point(57, 308);
-            this.maskedTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox7.TabIndex = 22;
-            this.maskedTextBox7.Text = "CategoriesName";
-            // 
-            // maskedTextBox6
-            // 
-            this.maskedTextBox6.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox6.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox6.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox6.Location = new System.Drawing.Point(57, 243);
-            this.maskedTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox6.TabIndex = 21;
-            this.maskedTextBox6.Text = "CategoriesId";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.GridColor = System.Drawing.SystemColors.MenuText;
-            this.dataGridView3.Location = new System.Drawing.Point(653, 263);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 29;
-            this.dataGridView3.Size = new System.Drawing.Size(466, 439);
-            this.dataGridView3.TabIndex = 27;
+            this.categoriesData.BackgroundColor = System.Drawing.Color.Gray;
+            this.categoriesData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.categoriesData.GridColor = System.Drawing.SystemColors.MenuText;
+            this.categoriesData.Location = new System.Drawing.Point(653, 263);
+            this.categoriesData.Name = "categoriesData";
+            this.categoriesData.RowHeadersWidth = 51;
+            this.categoriesData.RowTemplate.Height = 29;
+            this.categoriesData.Size = new System.Drawing.Size(466, 439);
+            this.categoriesData.TabIndex = 27;
+            this.categoriesData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoriesData_CellContentClick);
             // 
             // label4
             // 
@@ -200,27 +181,65 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "CATEGORIES LIST";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.MediumOrchid;
+            this.label5.Location = new System.Drawing.Point(43, 216);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 20);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Categories ID ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Crimson;
+            this.label6.Location = new System.Drawing.Point(22, 299);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 20);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Categories Name";
+            // 
+            // textCatID
+            // 
+            this.textCatID.BackColor = System.Drawing.Color.MediumOrchid;
+            this.textCatID.Location = new System.Drawing.Point(177, 216);
+            this.textCatID.Name = "textCatID";
+            this.textCatID.Size = new System.Drawing.Size(169, 27);
+            this.textCatID.TabIndex = 30;
+            // 
+            // textCatName
+            // 
+            this.textCatName.Location = new System.Drawing.Point(177, 296);
+            this.textCatName.Name = "textCatName";
+            this.textCatName.Size = new System.Drawing.Size(169, 27);
+            this.textCatName.TabIndex = 31;
+            // 
             // ManageCategorıes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1204, 729);
+            this.Controls.Add(this.textCatName);
+            this.Controls.Add(this.textCatID);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.categoriesData);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Addbtn);
-            this.Controls.Add(this.maskedTextBox7);
-            this.Controls.Add(this.maskedTextBox6);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageCategorıes";
             this.Text = "ManageCategorıes";
+            this.Load += new System.EventHandler(this.ManageCategorıes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,9 +255,11 @@
         private Button button2;
         private Button button1;
         private Button Addbtn;
-        private MaskedTextBox maskedTextBox7;
-        private MaskedTextBox maskedTextBox6;
-        private DataGridView dataGridView3;
+        private DataGridView categoriesData;
         private Label label4;
+        private Label label5;
+        private Label label6;
+        private TextBox textCatID;
+        private TextBox textCatName;
     }
 }
