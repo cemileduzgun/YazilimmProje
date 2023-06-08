@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.passwordtb = new System.Windows.Forms.TextBox();
+            this.nameTb = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clearbtn = new System.Windows.Forms.Button();
             this.loginbtn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.passwordtb = new System.Windows.Forms.MaskedTextBox();
-            this.nameTb = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -45,17 +47,54 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.passwordtb);
+            this.panel1.Controls.Add(this.nameTb);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.clearbtn);
             this.panel1.Controls.Add(this.loginbtn);
             this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.passwordtb);
-            this.panel1.Controls.Add(this.nameTb);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(175, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 421);
             this.panel1.TabIndex = 0;
+            // 
+            // passwordtb
+            // 
+            this.passwordtb.Location = new System.Drawing.Point(98, 234);
+            this.passwordtb.Name = "passwordtb";
+            this.passwordtb.Size = new System.Drawing.Size(125, 27);
+            this.passwordtb.TabIndex = 10;
+            this.passwordtb.TextChanged += new System.EventHandler(this.passwordtb_TextChanged);
+            // 
+            // nameTb
+            // 
+            this.nameTb.Location = new System.Drawing.Point(96, 187);
+            this.nameTb.Name = "nameTb";
+            this.nameTb.Size = new System.Drawing.Size(125, 27);
+            this.nameTb.TabIndex = 9;
+            this.nameTb.TextChanged += new System.EventHandler(this.nameTb_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 237);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "PASSWORD";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 190);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "USERNAME";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
@@ -89,6 +128,7 @@
             this.loginbtn.TabIndex = 4;
             this.loginbtn.Text = "LOGIN";
             this.loginbtn.UseVisualStyleBackColor = false;
+            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
             // checkBox1
             // 
@@ -102,23 +142,6 @@
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // passwordtb
-            // 
-            this.passwordtb.Location = new System.Drawing.Point(87, 202);
-            this.passwordtb.Name = "passwordtb";
-            this.passwordtb.Size = new System.Drawing.Size(125, 27);
-            this.passwordtb.TabIndex = 2;
-            this.passwordtb.Text = "Password";
-            // 
-            // nameTb
-            // 
-            this.nameTb.Location = new System.Drawing.Point(87, 151);
-            this.nameTb.Name = "nameTb";
-            this.nameTb.Size = new System.Drawing.Size(125, 27);
-            this.nameTb.TabIndex = 1;
-            this.nameTb.Text = "Name";
-            this.nameTb.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // label1
             // 
@@ -168,13 +191,15 @@
         #endregion
 
         private Panel panel1;
-        private MaskedTextBox passwordtb;
-        private MaskedTextBox nameTb;
         private Label label1;
         private Label label2;
         private PictureBox pictureBox1;
         private Button clearbtn;
         private Button loginbtn;
         private CheckBox checkBox1;
+        private TextBox passwordtb;
+        private TextBox nameTb;
+        private Label label4;
+        private Label label3;
     }
 }

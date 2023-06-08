@@ -32,27 +32,30 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.customerData = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.textCusName = new System.Windows.Forms.TextBox();
+            this.textCusID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textCusPhone = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerData)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -72,6 +75,7 @@
             this.button3.TabIndex = 18;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -87,6 +91,7 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Home";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -102,6 +107,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Addbtn
             // 
@@ -117,42 +123,7 @@
             this.Addbtn.TabIndex = 15;
             this.Addbtn.Text = "Add";
             this.Addbtn.UseVisualStyleBackColor = false;
-            // 
-            // maskedTextBox7
-            // 
-            this.maskedTextBox7.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox7.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox7.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox7.Location = new System.Drawing.Point(35, 305);
-            this.maskedTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox7.TabIndex = 14;
-            this.maskedTextBox7.Text = "CustomerPhone";
-            // 
-            // maskedTextBox6
-            // 
-            this.maskedTextBox6.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox6.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox6.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox6.Location = new System.Drawing.Point(35, 240);
-            this.maskedTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox6.TabIndex = 13;
-            this.maskedTextBox6.Text = "CustomerName";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox1.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox1.Location = new System.Drawing.Point(35, 171);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox1.TabIndex = 12;
-            this.maskedTextBox1.Text = "CustomerId";
+            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
             // panel1
             // 
@@ -177,6 +148,7 @@
             this.label2.Size = new System.Drawing.Size(43, 47);
             this.label2.TabIndex = 3;
             this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -202,17 +174,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Customers";
             // 
-            // dataGridView1
+            // customerData
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(809, 231);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(476, 326);
-            this.dataGridView1.TabIndex = 20;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.customerData.BackgroundColor = System.Drawing.Color.White;
+            this.customerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customerData.Location = new System.Drawing.Point(809, 231);
+            this.customerData.Name = "customerData";
+            this.customerData.RowHeadersWidth = 51;
+            this.customerData.RowTemplate.Height = 29;
+            this.customerData.Size = new System.Drawing.Size(476, 326);
+            this.customerData.TabIndex = 20;
+            this.customerData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel2
             // 
@@ -232,6 +204,30 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(231, 148);
             this.panel3.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(53, 54);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 32);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Orders ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cambria", 12.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(4, 14);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 25);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Orders Count";
             // 
             // label4
             // 
@@ -280,40 +276,6 @@
             this.panel4.Size = new System.Drawing.Size(231, 148);
             this.panel4.TabIndex = 23;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.MediumBlue;
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(988, 599);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(231, 148);
-            this.panel5.TabIndex = 23;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 12.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(4, 14);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 25);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Orders Count";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(53, 54);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 32);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Orders ";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -325,6 +287,16 @@
             this.label9.Size = new System.Drawing.Size(152, 25);
             this.label9.TabIndex = 27;
             this.label9.Text = "Orders Amount";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Location = new System.Drawing.Point(988, 599);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(231, 148);
+            this.panel5.TabIndex = 23;
             // 
             // label10
             // 
@@ -339,32 +311,88 @@
             this.label10.Text = "Last Order Date";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
+            // textCusName
+            // 
+            this.textCusName.Location = new System.Drawing.Point(185, 238);
+            this.textCusName.Name = "textCusName";
+            this.textCusName.Size = new System.Drawing.Size(169, 27);
+            this.textCusName.TabIndex = 35;
+            // 
+            // textCusID
+            // 
+            this.textCusID.BackColor = System.Drawing.Color.White;
+            this.textCusID.Location = new System.Drawing.Point(185, 177);
+            this.textCusID.Name = "textCusID";
+            this.textCusID.Size = new System.Drawing.Size(169, 27);
+            this.textCusID.TabIndex = 34;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Crimson;
+            this.label11.Location = new System.Drawing.Point(12, 241);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 20);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Customer Name";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Crimson;
+            this.label12.Location = new System.Drawing.Point(12, 180);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 20);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Customer ID ";
+            // 
+            // textCusPhone
+            // 
+            this.textCusPhone.Location = new System.Drawing.Point(185, 314);
+            this.textCusPhone.Name = "textCusPhone";
+            this.textCusPhone.Size = new System.Drawing.Size(169, 27);
+            this.textCusPhone.TabIndex = 37;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Crimson;
+            this.label13.Location = new System.Drawing.Point(12, 317);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(117, 20);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Customer Phone";
+            // 
             // ManageCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1338, 806);
+            this.Controls.Add(this.textCusPhone);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textCusName);
+            this.Controls.Add(this.textCusID);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.customerData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Addbtn);
-            this.Controls.Add(this.maskedTextBox7);
-            this.Controls.Add(this.maskedTextBox6);
-            this.Controls.Add(this.maskedTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageCustomers";
             this.Text = "ManageCustomers";
+            this.Load += new System.EventHandler(this.ManageCustomers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerData)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -382,14 +410,11 @@
         private Button button2;
         private Button button1;
         private Button Addbtn;
-        private MaskedTextBox maskedTextBox7;
-        private MaskedTextBox maskedTextBox6;
-        private MaskedTextBox maskedTextBox1;
         private Panel panel1;
         private Label label2;
         private Label label3;
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView customerData;
         private Panel panel2;
         private Panel panel3;
         private Label label4;
@@ -401,5 +426,11 @@
         private Label label10;
         private Label label9;
         private Panel panel5;
+        private TextBox textCusName;
+        private TextBox textCusID;
+        private Label label11;
+        private Label label12;
+        private TextBox textCusPhone;
+        private Label label13;
     }
 }

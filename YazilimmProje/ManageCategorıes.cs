@@ -41,7 +41,9 @@ namespace YazilimmProje
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
+          HomePage homePage = new HomePage();
+            homePage.Show();
+            this.Hide();
         }
 
         private void categoriesData_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,6 +65,34 @@ namespace YazilimmProje
             verigetir();
             MessageBox.Show("Categoeri Eklendi");
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string sql = "DELETE FROM categoriess WHERE idcategoriess =@idcat";
+                
+            cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@idcat", textCatID.Text);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            verigetir();
+            MessageBox.Show("Categoeri Silindi");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string sql = "UPDATE categoriess " +
+              "SET categoriesName = @catname " +
+              "WHERE idcategoriess = @idcat";
+            cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@idcat", textCatID.Text);
+            cmd.Parameters.AddWithValue("@catname", textCatName.Text);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            verigetir();
+            MessageBox.Show("Categoeri Güncellendi");
         }
     }
 }

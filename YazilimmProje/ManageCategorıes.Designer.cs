@@ -108,6 +108,7 @@
             this.button3.TabIndex = 26;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -139,6 +140,7 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Addbtn
             // 
@@ -158,10 +160,10 @@
             // 
             // categoriesData
             // 
-            this.categoriesData.BackgroundColor = System.Drawing.Color.Gray;
+            this.categoriesData.BackgroundColor = System.Drawing.Color.White;
             this.categoriesData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.categoriesData.GridColor = System.Drawing.SystemColors.MenuText;
-            this.categoriesData.Location = new System.Drawing.Point(653, 263);
+            this.categoriesData.Location = new System.Drawing.Point(666, 254);
             this.categoriesData.Name = "categoriesData";
             this.categoriesData.RowHeadersWidth = 51;
             this.categoriesData.RowTemplate.Height = 29;
@@ -184,8 +186,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.MediumOrchid;
-            this.label5.Location = new System.Drawing.Point(43, 216);
+            this.label5.BackColor = System.Drawing.Color.Crimson;
+            this.label5.Location = new System.Drawing.Point(22, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 20);
             this.label5.TabIndex = 28;
@@ -203,15 +205,15 @@
             // 
             // textCatID
             // 
-            this.textCatID.BackColor = System.Drawing.Color.MediumOrchid;
-            this.textCatID.Location = new System.Drawing.Point(177, 216);
+            this.textCatID.BackColor = System.Drawing.Color.White;
+            this.textCatID.Location = new System.Drawing.Point(165, 219);
             this.textCatID.Name = "textCatID";
             this.textCatID.Size = new System.Drawing.Size(169, 27);
             this.textCatID.TabIndex = 30;
             // 
             // textCatName
             // 
-            this.textCatName.Location = new System.Drawing.Point(177, 296);
+            this.textCatName.Location = new System.Drawing.Point(165, 299);
             this.textCatName.Name = "textCatName";
             this.textCatName.Size = new System.Drawing.Size(169, 27);
             this.textCatName.TabIndex = 31;

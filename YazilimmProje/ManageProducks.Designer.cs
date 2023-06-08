@@ -33,20 +33,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productData = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textProQty = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textProName = new System.Windows.Forms.TextBox();
+            this.textProID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textProDesc = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textProPrince = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,7 +60,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-119, -2);
+            this.panel1.Location = new System.Drawing.Point(-64, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1390, 134);
@@ -72,6 +77,7 @@
             this.label2.Size = new System.Drawing.Size(43, 47);
             this.label2.TabIndex = 3;
             this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -106,16 +112,17 @@
             this.panel2.Size = new System.Drawing.Size(1309, 32);
             this.panel2.TabIndex = 21;
             // 
-            // dataGridView1
+            // productData
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(757, 220);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(482, 452);
-            this.dataGridView1.TabIndex = 22;
+            this.productData.BackgroundColor = System.Drawing.Color.White;
+            this.productData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productData.Location = new System.Drawing.Point(757, 220);
+            this.productData.Name = "productData";
+            this.productData.RowHeadersWidth = 51;
+            this.productData.RowTemplate.Height = 29;
+            this.productData.Size = new System.Drawing.Size(482, 452);
+            this.productData.TabIndex = 22;
+            this.productData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productData_CellContentClick);
             // 
             // button3
             // 
@@ -131,6 +138,7 @@
             this.button3.TabIndex = 29;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -146,6 +154,7 @@
             this.button2.TabIndex = 28;
             this.button2.Text = "Home";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -161,6 +170,7 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "Edit";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Addbtn
             // 
@@ -176,67 +186,7 @@
             this.Addbtn.TabIndex = 26;
             this.Addbtn.Text = "Add";
             this.Addbtn.UseVisualStyleBackColor = false;
-            // 
-            // maskedTextBox7
-            // 
-            this.maskedTextBox7.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox7.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox7.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox7.Location = new System.Drawing.Point(41, 317);
-            this.maskedTextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox7.TabIndex = 25;
-            this.maskedTextBox7.Text = "ProductQty";
-            // 
-            // maskedTextBox6
-            // 
-            this.maskedTextBox6.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox6.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox6.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox6.Location = new System.Drawing.Point(41, 248);
-            this.maskedTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox6.TabIndex = 24;
-            this.maskedTextBox6.Text = "ProductName";
-            this.maskedTextBox6.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox6_MaskInputRejected);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox1.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox1.Location = new System.Drawing.Point(41, 186);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox1.TabIndex = 23;
-            this.maskedTextBox1.Text = "Productid";
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox2.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox2.Location = new System.Drawing.Point(41, 435);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox2.TabIndex = 30;
-            this.maskedTextBox2.Text = "Description";
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.BackColor = System.Drawing.Color.MediumOrchid;
-            this.maskedTextBox3.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.maskedTextBox3.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox3.Location = new System.Drawing.Point(41, 372);
-            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(187, 27);
-            this.maskedTextBox3.TabIndex = 31;
-            this.maskedTextBox3.Text = "ProductPrice";
+            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
             // comboBox1
             // 
@@ -259,32 +209,124 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Products List";
             // 
+            // textProQty
+            // 
+            this.textProQty.Location = new System.Drawing.Point(204, 296);
+            this.textProQty.Name = "textProQty";
+            this.textProQty.Size = new System.Drawing.Size(169, 27);
+            this.textProQty.TabIndex = 43;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Crimson;
+            this.label13.Location = new System.Drawing.Point(31, 299);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(87, 20);
+            this.label13.TabIndex = 42;
+            this.label13.Text = "Product Qty";
+            // 
+            // textProName
+            // 
+            this.textProName.Location = new System.Drawing.Point(204, 220);
+            this.textProName.Name = "textProName";
+            this.textProName.Size = new System.Drawing.Size(169, 27);
+            this.textProName.TabIndex = 41;
+            // 
+            // textProID
+            // 
+            this.textProID.BackColor = System.Drawing.Color.White;
+            this.textProID.Location = new System.Drawing.Point(204, 159);
+            this.textProID.Name = "textProID";
+            this.textProID.Size = new System.Drawing.Size(169, 27);
+            this.textProID.TabIndex = 40;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Crimson;
+            this.label11.Location = new System.Drawing.Point(31, 223);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 20);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Product Name";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Crimson;
+            this.label12.Location = new System.Drawing.Point(31, 150);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 20);
+            this.label12.TabIndex = 38;
+            this.label12.Text = "Produc ID";
+            // 
+            // textProDesc
+            // 
+            this.textProDesc.Location = new System.Drawing.Point(204, 437);
+            this.textProDesc.Name = "textProDesc";
+            this.textProDesc.Size = new System.Drawing.Size(169, 27);
+            this.textProDesc.TabIndex = 47;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Crimson;
+            this.label5.Location = new System.Drawing.Point(31, 440);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Decripciton";
+            // 
+            // textProPrince
+            // 
+            this.textProPrince.Location = new System.Drawing.Point(204, 361);
+            this.textProPrince.Name = "textProPrince";
+            this.textProPrince.Size = new System.Drawing.Size(169, 27);
+            this.textProPrince.TabIndex = 45;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Crimson;
+            this.label6.Location = new System.Drawing.Point(31, 364);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 20);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Product Prince";
+            // 
             // ManageProducks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1309, 816);
+            this.Controls.Add(this.textProDesc);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textProPrince);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textProQty);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textProName);
+            this.Controls.Add(this.textProID);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Addbtn);
-            this.Controls.Add(this.maskedTextBox7);
-            this.Controls.Add(this.maskedTextBox6);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.productData);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageProducks";
             this.Text = "ManageProducks";
+            this.Load += new System.EventHandler(this.ManageProducks_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,17 +339,22 @@
         private Label label3;
         private Label label1;
         private Panel panel2;
-        private DataGridView dataGridView1;
+        private DataGridView productData;
         private Button button3;
         private Button button2;
         private Button button1;
         private Button Addbtn;
-        private MaskedTextBox maskedTextBox7;
-        private MaskedTextBox maskedTextBox6;
-        private MaskedTextBox maskedTextBox1;
-        private MaskedTextBox maskedTextBox2;
-        private MaskedTextBox maskedTextBox3;
         private ComboBox comboBox1;
         private Label label4;
+        private TextBox textProQty;
+        private Label label13;
+        private TextBox textProName;
+        private TextBox textProID;
+        private Label label11;
+        private Label label12;
+        private TextBox textProDesc;
+        private Label label5;
+        private TextBox textProPrince;
+        private Label label6;
     }
 }

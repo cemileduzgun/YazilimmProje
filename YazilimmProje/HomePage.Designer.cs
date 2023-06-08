@@ -120,6 +120,7 @@
             this.label1.Size = new System.Drawing.Size(133, 32);
             this.label1.TabIndex = 6;
             this.label1.Text = "PRODUCTS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -131,6 +132,7 @@
             this.label2.Size = new System.Drawing.Size(149, 32);
             this.label2.TabIndex = 7;
             this.label2.Text = "CUSTOMERS";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label6
             // 
@@ -142,6 +144,7 @@
             this.label6.Size = new System.Drawing.Size(146, 32);
             this.label6.TabIndex = 11;
             this.label6.Text = "CATEGORIES";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -153,6 +156,7 @@
             this.label7.Size = new System.Drawing.Size(82, 32);
             this.label7.TabIndex = 12;
             this.label7.Text = "USERS";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -164,6 +168,7 @@
             this.label8.Size = new System.Drawing.Size(102, 32);
             this.label8.TabIndex = 13;
             this.label8.Text = "ORDERS";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // HomePage
             // 
