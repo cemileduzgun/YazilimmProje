@@ -25,9 +25,67 @@ namespace YazilimmProje
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textCusID.Text = customerData.CurrentRow.Cells[0].Value.ToString();
-            textCusName.Text = customerData.CurrentRow.Cells[1].Value.ToString();
-            textCusPhone.Text = customerData.CurrentRow.Cells[2].Value.ToString();
+           
+            
+                textCusID.Text = customerData.CurrentRow.Cells[0].Value.ToString();
+                textCusName.Text = customerData.CurrentRow.Cells[1].Value.ToString();
+                textCusPhone.Text = customerData.CurrentRow.Cells[2].Value.ToString();
+
+                try
+                {
+                    conn.Open();
+
+                    MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM orders WHERE CustId = @custid", conn);
+                    cmd.Parameters.AddWithValue("@custid", textCusID.Text);
+
+                    int orderCount = Convert.ToInt32(cmd.ExecuteScalar());
+                    order.Text = orderCount.ToString();
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            try
+            {
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand("SELECT COALESCE(SUM(TotalAmt), 0) FROM orders WHERE CustId = @custid", conn);
+                cmd.Parameters.AddWithValue("@custid", textCusID.Text);
+
+                object result = cmd.ExecuteScalar();
+                if (result != DBNull.Value)
+                {
+                    int orderCount = Convert.ToInt32(result);
+                    amount.Text = orderCount.ToString();
+                }
+                else
+                {
+                    amount.Text = "0";
+                }
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            
+
+
+            try
+            {
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM orders WHERE CustId = @custid", conn);
+                cmd.Parameters.AddWithValue("@custid", textCusID.Text);
+
+                int orderCount = Convert.ToInt32(cmd.ExecuteScalar());
+                date.Text = orderCount.ToString();
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -109,6 +167,16 @@ namespace YazilimmProje
         private void ManageCustomers_Load(object sender, EventArgs e)
         {
             verigetir();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void date_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

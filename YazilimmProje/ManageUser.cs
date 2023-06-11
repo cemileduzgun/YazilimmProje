@@ -57,7 +57,7 @@ namespace YazilimmProje
             cmd.ExecuteNonQuery();
             conn.Close();
             verigetir();
-            MessageBox.Show("Categoeri Eklendi");
+            MessageBox.Show("User Eklendi");
         }
 
 
@@ -90,7 +90,7 @@ namespace YazilimmProje
             cmd.ExecuteNonQuery();
             conn.Close();
             verigetir();
-            MessageBox.Show("Category Güncellendi");
+            MessageBox.Show("User Güncellendi");
 
         }
 
@@ -103,7 +103,7 @@ namespace YazilimmProje
             cmd.ExecuteNonQuery();
             conn.Close();
             verigetir();
-            MessageBox.Show("Categoeri Silindi");
+            MessageBox.Show("User Silindi");
         }
 
         private void button2_Click(object sender, EventArgs e)

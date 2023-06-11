@@ -53,7 +53,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.BackColor = System.Drawing.Color.DarkMagenta;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -80,7 +80,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Ivory;
             this.label3.Location = new System.Drawing.Point(301, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -92,7 +92,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Ivory;
             this.label1.Location = new System.Drawing.Point(454, 99);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -103,7 +103,7 @@
             // 
             // Addbtn
             // 
-            this.Addbtn.BackColor = System.Drawing.Color.Crimson;
+            this.Addbtn.BackColor = System.Drawing.Color.DarkMagenta;
             this.Addbtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Addbtn.FlatAppearance.BorderSize = 0;
             this.Addbtn.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -119,7 +119,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
+            this.button1.BackColor = System.Drawing.Color.DarkMagenta;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -135,7 +135,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Crimson;
+            this.button2.BackColor = System.Drawing.Color.DarkMagenta;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -151,7 +151,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.BackColor = System.Drawing.Color.DarkMagenta;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -179,7 +179,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Crimson;
+            this.panel2.BackColor = System.Drawing.Color.DarkMagenta;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 730);
             this.panel2.Name = "panel2";
@@ -189,17 +189,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Ivory;
             this.label4.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Crimson;
+            this.label4.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label4.Location = new System.Drawing.Point(802, 200);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 47);
+            this.label4.Size = new System.Drawing.Size(220, 47);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Users List";
+            this.label4.Text = "USERS LIST";
             // 
             // textUsePhone
             // 
+            this.textUsePhone.BackColor = System.Drawing.Color.Ivory;
             this.textUsePhone.Location = new System.Drawing.Point(186, 417);
             this.textUsePhone.Name = "textUsePhone";
             this.textUsePhone.Size = new System.Drawing.Size(169, 34);
@@ -208,15 +210,17 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Crimson;
+            this.label13.BackColor = System.Drawing.Color.Ivory;
+            this.label13.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label13.Location = new System.Drawing.Point(13, 420);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(119, 28);
+            this.label13.Size = new System.Drawing.Size(107, 28);
             this.label13.TabIndex = 42;
-            this.label13.Text = "TelepPhone";
+            this.label13.Text = "Telephone";
             // 
             // textUsePass
             // 
+            this.textUsePass.BackColor = System.Drawing.Color.Ivory;
             this.textUsePass.Location = new System.Drawing.Point(186, 341);
             this.textUsePass.Name = "textUsePass";
             this.textUsePass.Size = new System.Drawing.Size(169, 34);
@@ -224,7 +228,7 @@
             // 
             // textUseName
             // 
-            this.textUseName.BackColor = System.Drawing.Color.White;
+            this.textUseName.BackColor = System.Drawing.Color.Ivory;
             this.textUseName.Location = new System.Drawing.Point(186, 280);
             this.textUseName.Name = "textUseName";
             this.textUseName.Size = new System.Drawing.Size(169, 34);
@@ -233,7 +237,8 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Crimson;
+            this.label11.BackColor = System.Drawing.Color.Ivory;
+            this.label11.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label11.Location = new System.Drawing.Point(13, 344);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(97, 28);
@@ -243,7 +248,8 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Crimson;
+            this.label12.BackColor = System.Drawing.Color.Ivory;
+            this.label12.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label12.Location = new System.Drawing.Point(13, 283);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(113, 28);
@@ -252,7 +258,7 @@
             // 
             // textUseId
             // 
-            this.textUseId.BackColor = System.Drawing.Color.White;
+            this.textUseId.BackColor = System.Drawing.Color.Ivory;
             this.textUseId.Location = new System.Drawing.Point(186, 216);
             this.textUseId.Name = "textUseId";
             this.textUseId.Size = new System.Drawing.Size(169, 34);
@@ -261,7 +267,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Crimson;
+            this.label5.BackColor = System.Drawing.Color.Ivory;
+            this.label5.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label5.Location = new System.Drawing.Point(13, 219);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 28);

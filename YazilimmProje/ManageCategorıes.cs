@@ -94,5 +94,10 @@ namespace YazilimmProje
             verigetir();
             MessageBox.Show("Categoeri Güncellendi");
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -38,7 +38,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.combaCatPro = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textProQty = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.BackColor = System.Drawing.Color.DarkMagenta;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -83,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Ivory;
             this.label3.Location = new System.Drawing.Point(424, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -95,7 +95,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Ivory;
             this.label1.Location = new System.Drawing.Point(553, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -105,7 +105,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Crimson;
+            this.panel2.BackColor = System.Drawing.Color.DarkMagenta;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 784);
             this.panel2.Name = "panel2";
@@ -116,17 +116,17 @@
             // 
             this.productData.BackgroundColor = System.Drawing.Color.White;
             this.productData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productData.Location = new System.Drawing.Point(757, 220);
+            this.productData.Location = new System.Drawing.Point(572, 232);
             this.productData.Name = "productData";
             this.productData.RowHeadersWidth = 51;
             this.productData.RowTemplate.Height = 29;
-            this.productData.Size = new System.Drawing.Size(482, 452);
+            this.productData.Size = new System.Drawing.Size(725, 316);
             this.productData.TabIndex = 22;
             this.productData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productData_CellContentClick);
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.BackColor = System.Drawing.Color.DarkMagenta;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -142,7 +142,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Crimson;
+            this.button2.BackColor = System.Drawing.Color.DarkMagenta;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -158,7 +158,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
+            this.button1.BackColor = System.Drawing.Color.DarkMagenta;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -174,7 +174,7 @@
             // 
             // Addbtn
             // 
-            this.Addbtn.BackColor = System.Drawing.Color.Crimson;
+            this.Addbtn.BackColor = System.Drawing.Color.DarkMagenta;
             this.Addbtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Addbtn.FlatAppearance.BorderSize = 0;
             this.Addbtn.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -188,29 +188,35 @@
             this.Addbtn.UseVisualStyleBackColor = false;
             this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
-            // comboBox1
+            // combaCatPro
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(30, 499);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 28);
-            this.comboBox1.TabIndex = 32;
-            this.comboBox1.Text = "Product Category";
+            this.combaCatPro.BackColor = System.Drawing.Color.Ivory;
+            this.combaCatPro.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.combaCatPro.FormattingEnabled = true;
+            this.combaCatPro.Location = new System.Drawing.Point(30, 499);
+            this.combaCatPro.Name = "combaCatPro";
+            this.combaCatPro.Size = new System.Drawing.Size(187, 28);
+            this.combaCatPro.TabIndex = 32;
+            this.combaCatPro.Text = "Product Category";
+            this.combaCatPro.SelectedIndexChanged += new System.EventHandler(this.combaCatPro_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Ivory;
             this.label4.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Crimson;
-            this.label4.Location = new System.Drawing.Point(897, 150);
+            this.label4.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.label4.Location = new System.Drawing.Point(810, 159);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(245, 47);
+            this.label4.Size = new System.Drawing.Size(299, 47);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Products List";
+            this.label4.Text = "PRODUCTS LIST";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textProQty
             // 
+            this.textProQty.BackColor = System.Drawing.Color.Ivory;
             this.textProQty.Location = new System.Drawing.Point(204, 296);
             this.textProQty.Name = "textProQty";
             this.textProQty.Size = new System.Drawing.Size(169, 27);
@@ -219,7 +225,8 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Crimson;
+            this.label13.BackColor = System.Drawing.Color.Ivory;
+            this.label13.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label13.Location = new System.Drawing.Point(31, 299);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(87, 20);
@@ -228,6 +235,8 @@
             // 
             // textProName
             // 
+            this.textProName.BackColor = System.Drawing.Color.Ivory;
+            this.textProName.ForeColor = System.Drawing.Color.Black;
             this.textProName.Location = new System.Drawing.Point(204, 220);
             this.textProName.Name = "textProName";
             this.textProName.Size = new System.Drawing.Size(169, 27);
@@ -235,7 +244,7 @@
             // 
             // textProID
             // 
-            this.textProID.BackColor = System.Drawing.Color.White;
+            this.textProID.BackColor = System.Drawing.Color.Ivory;
             this.textProID.Location = new System.Drawing.Point(204, 159);
             this.textProID.Name = "textProID";
             this.textProID.Size = new System.Drawing.Size(169, 27);
@@ -244,7 +253,8 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Crimson;
+            this.label11.BackColor = System.Drawing.Color.Ivory;
+            this.label11.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label11.Location = new System.Drawing.Point(31, 223);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(104, 20);
@@ -254,8 +264,9 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Crimson;
-            this.label12.Location = new System.Drawing.Point(31, 150);
+            this.label12.BackColor = System.Drawing.Color.Ivory;
+            this.label12.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.label12.Location = new System.Drawing.Point(31, 166);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 20);
             this.label12.TabIndex = 38;
@@ -263,6 +274,7 @@
             // 
             // textProDesc
             // 
+            this.textProDesc.BackColor = System.Drawing.Color.Ivory;
             this.textProDesc.Location = new System.Drawing.Point(204, 437);
             this.textProDesc.Name = "textProDesc";
             this.textProDesc.Size = new System.Drawing.Size(169, 27);
@@ -271,7 +283,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Crimson;
+            this.label5.BackColor = System.Drawing.Color.Ivory;
+            this.label5.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label5.Location = new System.Drawing.Point(31, 440);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 20);
@@ -280,6 +293,7 @@
             // 
             // textProPrince
             // 
+            this.textProPrince.BackColor = System.Drawing.Color.Ivory;
             this.textProPrince.Location = new System.Drawing.Point(204, 361);
             this.textProPrince.Name = "textProPrince";
             this.textProPrince.Size = new System.Drawing.Size(169, 27);
@@ -288,7 +302,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Crimson;
+            this.label6.BackColor = System.Drawing.Color.Ivory;
+            this.label6.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label6.Location = new System.Drawing.Point(31, 364);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 20);
@@ -312,7 +327,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.combaCatPro);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -344,7 +359,7 @@
         private Button button2;
         private Button button1;
         private Button Addbtn;
-        private ComboBox comboBox1;
+        private ComboBox combaCatPro;
         private Label label4;
         private TextBox textProQty;
         private Label label13;

@@ -9,6 +9,7 @@ namespace YazilimmProje
         MySqlConnection conn = new MySqlConnection("Server=localhost;Database=inventorymanagemtsystem;uid=root;Pwd='cemileduzgun123..';");
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
+        MySqlDataReader MySqlDataReader;
         DataTable dt;
         public Form1()
         {
@@ -54,22 +55,37 @@ namespace YazilimmProje
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO Admin(username,password)"
-                + "VALUES(@useradmin , @userpass)";
-            cmd = new MySqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@useradmin", nameTb.Text);
-            cmd.Parameters.AddWithValue("@userpass", passwordtb.Text);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            
-            MessageBox.Show("GÝRÝÞ BAÞARILI");
+            if (nameTb.Text == "" || passwordtb.Text == "")
+            {
+                MessageBox.Show("Lütfen boþ alanlarý doldurun");
+
+            }
+            else
+            {
+                conn.Open();
+
+                string sql = "SELECT * FROM users WHERE UsersName = @username AND UsersPassword = @userpass";
+                cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@username", nameTb.Text);
+                cmd.Parameters.AddWithValue("@userpass", passwordtb.Text);
+                MySqlDataReader mySqlDataReader = cmd.ExecuteReader();
+            if (mySqlDataReader.Read())
+                {
+                    MessageBox.Show("Giriþ Baþarýlý");
+                    HomePage homePage = new HomePage();
+                    homePage.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Hatalý bilgi giriþi");
+                }
+              
+            }
+           
 
 
-
-            HomePage homePage =new HomePage();
-            homePage.Show();
-            this.Hide();
+          
         }
 
         private void nameTb_TextChanged(object sender, EventArgs e)
@@ -81,5 +97,17 @@ namespace YazilimmProje
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+    }
+
+    
